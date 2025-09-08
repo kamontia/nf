@@ -1,0 +1,9 @@
+pyproject.toml
+src/nf/__init__.py
+src/nf/main.py
+src/nf.egg-info/PKG-INFO
+src/nf.egg-info/SOURCES.txt
+src/nf.egg-info/dependency_links.txt
+src/nf.egg-info/entry_points.txt
+src/nf.egg-info/requires.txt
+src/nf.egg-info/top_level.txt
