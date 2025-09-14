@@ -113,7 +113,18 @@ api_token = "your-secret-api-token"
 
 For mobile app notifications, you need to deploy the serverless backend to your own AWS account. The backend consists of an API Gateway, a Lambda function, and an SNS Topic.
 
-For detailed instructions, please see the [backend/README.md](backend/README.md) file.
+For detailed deployment instructions, please see the [backend/README.md](backend/README.md) file.
+
+### Connecting the Mobile App
+
+Once the backend is deployed, you need to configure the mobile app to connect to it. Use the `setup-app` command to generate a QR code containing the necessary configuration.
+
+```sh
+# Ensure your AWS credentials are configured in your environment
+nf setup-app
+```
+
+This will print a QR code in your terminal. Launch the `nf` mobile app and scan this code to automatically configure the app.
 
 ## Development
 

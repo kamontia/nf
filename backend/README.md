@@ -69,7 +69,7 @@ The Lambda function needs permission to write to SNS and CloudWatch Logs.
     # For writing logs
     aws iam attach-role-policy --role-name nf-lambda-role --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
     ```
-    *Note: For better security, you could create a custom policy that only allows publishing to the specific SNS topic.*
+    *Note: For better security, you could create a custom policy that only allows the `sns:Publish` action on the specific SNS topic. The `nf setup-app` command also requires `sns:ListTopics` permission to find the topic ARN.*
 
 ### Step 3: Create the SNS Topic
 
