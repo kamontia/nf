@@ -1,0 +1,29 @@
+# Example configuration for nf (notify)
+# Place this file at ~/.config/nf/config.toml
+
+# The default threshold in seconds to trigger a notification.
+# Can be overridden by the -t flag or NF_THRESHOLD environment variable.
+threshold = 15
+
+# The default notifier to use.
+# Options: "os", "slack", "teams", "app"
+# Can be overridden by NF_NOTIFIER environment variable.
+notifier = "os"
+
+# Webhook URL for Slack notifications.
+# Required if notifier is "slack".
+# Can be set via NF_SLACK_WEBHOOK.
+slack_webhook = "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+
+# Webhook URL for Microsoft Teams notifications.
+# Required if notifier is "teams".
+# Can be set via NF_TEAMS_WEBHOOK.
+teams_webhook = "https://your-tenant.webhook.office.com/..."
+
+# API URL for the dedicated mobile app backend.
+# Can be set via NF_API_URL.
+api_url = "https://yourapi.execute-api.us-east-1.amazonaws.com/prod/notify"
+
+# Bearer token for the mobile app backend API.
+# Can be set via NF_API_TOKEN.
+api_token = "your-secret-api-token"
